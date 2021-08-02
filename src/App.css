@@ -1,5 +1,65 @@
+@font-face {
+  font-family: 'aileron bold';
+  src: url('./fonts/aileron-bold-webfont.woff2') format('woff2'),
+       url('./fonts/aileron-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'aileron regular';
+  src: url('./fonts/aileron-regular-webfont.woff2') format('woff2'),
+       url('./fonts/aileron-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'pier sans bold';
+  src: url('./fonts/piersans-bold-webfont.woff2') format('woff2'),
+       url('./fonts/piersans-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'pier sans regular';
+  src: url('./fonts/piersans-regular-webfont.woff2') format('woff2'),
+       url('./fonts/piersans-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+@font-face {
+  font-family: 'zona pro';
+  src: url('./fonts/zonapro-extralight-webfont.woff2') format('woff2'),
+       url('./fonts/zonapro-extralight-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
 * {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  font-family: "open sans", sans-serif;
+}
+
+h1 {
+  font-family: "aileron bold", sans-serif;
+}
+
+h2, h3, h5 {
+  font-family: "pier sans bold", sans-serif;
 }
 
 header {
@@ -7,56 +67,84 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 60vh;
+  height: 100vh;
+  background: url("./images/header_background.png") no-repeat;
+  background-size: cover;
+  position: relative;
+  color: #fff;
 }
 
-header img {
-  width: 18%;
-  margin-bottom: 2rem;
+header .logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+ 
 }
 
-header h2 {
-  margin-bottom: 2rem;
+header .logo img {
+  width: 120px;
 }
 
-header p {
+
+header .col p {
   margin-top: 0;
   margin-bottom: .4rem;
   font-weight: lighter;
+  line-height: 1.8;
+  margin: 1rem 0 2.2rem 0;
 }
 
-section.about-us {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+header .col button {
+  background-color: #872832;
+  align-self: flex-start;
+  padding: 0.6rem 1.5rem;
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
 }
 
-section.about-us div {
+section {
+  padding: 6rem ;
+}
+
+section.maintenance, section.services {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 5rem 10rem;
+  padding: 5rem 0;
 }
 
-.get-in-touch {
-  background-color: #0b1634;
+section.maintenance h2 {
+  font-family: "pier sans regular";
+}
+
+section.maintenance img {
+  width: 40rem;
+}
+
+section.help img {
+  width: 30rem;
+}
+
+section.contact input {
+  width: 60%;
+  padding: .7rem .9rem;
+  border: 1px solid #ede5d9;
+  border-radius: 6px;
+  background-color: #faf9f7;
+}
+
+section.contact button {
+  height: 100%;
+  border: 0;
+  border-radius: 6px;
+  background-color: #872832;
   color: #fff;
-  margin-left: 8rem;
+  font-family: "open sans";
+  font-weight: bold;
+  padding: .5rem 2rem;
+  margin-left: 1rem;
 }
 
-.get-in-touch h2 {
-  margin-bottom: 3rem;
-}
 
-.contact-info-container {
-  list-style: none;
-}
-
-.contact-info-container li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-.contact-info-container li svg {
-  margin-right: 4rem; 
-}
