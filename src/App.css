@@ -129,14 +129,21 @@ section.help img {
 
 section.contact input {
   width: 60%;
+  
+}
+
+section.contact textarea, section.contact input {
   padding: .7rem .9rem;
   border: 1px solid #ede5d9;
   border-radius: 6px;
   background-color: #faf9f7;
 }
 
-section.contact button {
-  height: 100%;
+section.contact textarea:focus, section.contact input:focus {
+  outline: none;
+}
+
+section.contact button {  
   border: 0;
   border-radius: 6px;
   background-color: #872832;
@@ -144,7 +151,6 @@ section.contact button {
   font-family: "open sans";
   font-weight: bold;
   padding: .5rem 2rem;
-  margin-left: 1rem;
 }
 
 

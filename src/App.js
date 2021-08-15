@@ -9,15 +9,27 @@ import section4Image from "./images/section4.png"
 import section5Image from "./images/section5.png"
 import { useState } from 'react';
 import Fade from "react-reveal/Fade"
-import emailjs from "emailjs"
+import {init, send} from "emailjs-com"
+init("user_q8e4FXE0st9dPWaw6e4l3")
 
 function App() {
 
   const [email, setEmail ] = useState("");
+  const [message, setMessage ] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
+    const result = await send("service_u5jt4ss", "template_tlzgpjy", {
+      sender_email: email,
+      message
+    }, "user_q8e4FXE0st9dPWaw6e4l3")
 
+    if (result.status === 200) {
+      console.log("jawna behy")
+    }
+
+    setEmail("")
+    setMessage("")
   }
 
 
@@ -101,9 +113,12 @@ function App() {
             <div className="col d-flex flex-column justify-content-center"> 
               <h3 className="mb-4">Travailler avec nous ?</h3>
               <p>JEI est une association à but non lucratif géré par les etudiants de l'INSAT et offrant des services dans le domaine de l'IT. Les principales compétences de la Junior Entreprise INSAT tournant principalement autour du développement Web, du développement mobile et du référencement.</p>
-              <form onSubmit={handleSubmit}>
+              <form className="d-flex flex-column" onSubmit={handleSubmit}>
                 <input type="email" required placeholder="Enter your email address" value={email} onChange={(e) => setEmail(e.target.value)} />
-                <button type="submit">Envoyer</button>
+                <textarea className="my-4" name="" id="" cols="30" rows="10" placeholder="Write your message" value={message} onChange={(e) => setMessage(e.target.value)}>
+
+                </textarea>
+                <button className="align-self-end" type="submit">Envoyer</button>
               </form>
             </div>
           </Fade>
