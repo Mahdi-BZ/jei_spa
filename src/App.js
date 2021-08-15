@@ -53,7 +53,7 @@ function App() {
           <div className="col d-flex flex-column align-items-center">
             <Fade left>
               <img src={seoIcon} alt="" />
-              <h5>Le référencement des sites Web</h5>
+              <h5>Le Référencement des Sites Web</h5>
               <p>Notre objectif est d'améliorer le positionnement de vos sites internet dans les pages de résultats des moteurs de recherche afin d'augmenter leurs visibilités et de vous permettre de vous démarquer de la concurrence et de vous positionner en tête de file de votre marché.</p>
             </Fade>
           </div>
